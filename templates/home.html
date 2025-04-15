@@ -1,0 +1,226 @@
+{% extends "base.html" %} {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF AI Assistant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+      }
+
+      .hero-section {
+        padding: 5rem 0;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-weight: 700;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        color: #495057;
+        margin-bottom: 3rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #3a7bd5;
+      }
+
+      .feature-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .demo-image {
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        height: auto;
+      }
+
+      .how-it-works {
+        background: white;
+        padding: 5rem 0;
+      }
+
+      .step-number {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #3a7bd5;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title animate__animated animate__fadeInDown">
+          Your AI-Powered PDF Assistant
+        </h1>
+        <p
+          class="hero-subtitle animate__animated animate__fadeIn animate__delay-1s"
+        >
+          Upload your PDF documents and get instant summaries, ask questions,
+          and extract key information with our intelligent chatbot.
+        </p>
+        <a
+          href="/login"
+          class="btn btn-primary cta-button animate__animated animate__fadeInUp animate__delay-2s"
+        >
+          Get Started - It's Free
+        </a>
+
+        <div class="mt-5 animate__animated animate__fadeIn animate__delay-3s">
+          <img
+            src="https://via.placeholder.com/800x450?text=AI+PDF+Chatbot+Demo"
+            alt="Demo"
+            class="demo-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-file-earmark-text"></i>
+              </div>
+              <h3 class="feature-title">PDF Summarization</h3>
+              <p>
+                Get concise summaries of lengthy documents in seconds, saving
+                you hours of reading time.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <h3 class="feature-title">Natural Language Queries</h3>
+              <p>
+                Ask questions about your documents in plain English and get
+                accurate answers instantly.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-collection"></i>
+              </div>
+              <h3 class="feature-title">Multiple Document Analysis</h3>
+              <p>
+                Upload several PDFs at once and get insights across all your
+                documents simultaneously.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="text-center mb-5">How It Works</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h4><span class="step-number">1</span>Upload</h4>
+            <p>
+              Upload your PDF documents through our simple interface. No
+              registration required.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h4><span class="step-number">2</span>Process</h4>
+            <p>
+              Our AI analyzes your documents, extracting key information and
+              preparing for your queries.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h4><span class="step-number">3</span>Interact</h4>
+            <p>
+              Ask questions, request summaries, or get insights through our
+              conversational interface.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4">Ready to transform how you work with PDFs?</h2>
+        <a href="/login" class="btn btn-primary btn-lg cta-button">
+          Start Chatting with Your Documents Now
+        </a>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"></script>
+  </body>
+</html>
+
+{% endblock %}

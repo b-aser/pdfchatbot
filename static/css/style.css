@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main-content {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.chat-message {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    margin-right: auto;
+}
+
+.welcome-message {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.document-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.document-item:hover {
+    background-color: #495057;
+}
+
+#documentList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.source-badge {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+

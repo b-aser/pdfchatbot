@@ -1,0 +1,2 @@
+in this i tried to load my model just to chat with it but not working meaning it doesnt make apear the users 
+input on the screen.
